@@ -43,6 +43,12 @@ public class ObjectMapperContextResolver implements ContextResolver<ObjectMapper
         
         customSerializer.addSerializer(Immagine.class, new ImmagineSerializer());
         customSerializer.addDeserializer(Immagine.class, new ImmagineDeserializer());
+		
+		customSerializer.addSerializer(Palinsesto.class, new PalinsestoSerializer());
+        customSerializer.addDeserializer(Palinsesto.class, new PalinsestoDeserializer());
+		
+		customSerializer.addSerializer(Episodio.class, new EpisodioSerializer());
+        customSerializer.addDeserializer(Episodio.class, new EpisodioDeserializer());
 
         mapper.registerModule(customSerializer);
 
