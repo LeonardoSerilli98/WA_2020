@@ -65,7 +65,7 @@ public class CanaleRes {
         // posso costruitmi il path delle url a partire dalla uri di base
             //ad esempio posso prendere i path di altri metodi della classe
         
-        URI url = uri.getBaseUriBuilder()                     //l'uri di base è localhost/rest/canali/id
+        URI url = uri.getBaseUriBuilder()           //l'uri di base è localhost/rest/canali/id
                 .path(getClass())                   // aggiungo */Canali al path
                 .path(getClass(), "metodoProvami")  //aggiungo il path indicato sopra il metodoProvami -/provami?param=?
                 .build();                           //posso sostituire il parametro rimasto vuoto nell'uri direttamente dal build()

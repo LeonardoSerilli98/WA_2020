@@ -31,9 +31,9 @@ public class ImmagineSerializer extends StdSerializer<Immagine>{
     public void serialize(Immagine t, JsonGenerator jg, SerializerProvider sp) throws IOException, JsonProcessingException {
         
         jg.writeStartObject();
-        jg.writeNumberField("taglia", t.getTaglia());
         jg.writeObjectField("nome", t.getNome());
         jg.writeObjectField("tipo", t.getTipo());
+        jg.writeNumberField("taglia", t.getTaglia());
         jg.writeEndObject();
     }
     

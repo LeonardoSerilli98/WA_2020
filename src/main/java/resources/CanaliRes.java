@@ -5,6 +5,7 @@
  */
 package resources;
 
+import authResources.Logged;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.Consumes;
@@ -34,6 +35,7 @@ public class CanaliRes {
     
     // Nota: poi ritorneremo solo risorse di tipo response anziche liste di stringhe
         //poiche con la sintassi 'Response.ok(<stringhe>).build()' ci ritorna anche lo status code
+    @Logged
     @GET
     @Produces("application/json")
     public List<String> esempio(
@@ -105,13 +107,13 @@ public class CanaliRes {
     }
 
          
-    
+    @Path("esempioPost")
     @POST
     @Consumes("application/json")
     public Response esempioStore(@Context UriInfo uriinfo, Canale c ){
-        //inseriamo il canale nel sistema
-        //ritorniamo l'uri alla risorsa appena creata
-        return null;
+        
+        return Response.ok(c).build();
+      
     }
     
     

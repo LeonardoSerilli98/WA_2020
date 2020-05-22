@@ -38,12 +38,11 @@ public class ObjectMapperContextResolver implements ContextResolver<ObjectMapper
         //configuriamo i nostri serializzatori custom
         
         customSerializer.addSerializer(Canale.class, new CanaleSerializer());
-        //customSerializer.addDeserializer(Canale.class, new CanaleDeserializer());
+        customSerializer.addDeserializer(Canale.class, new CanaleDeserializer());
        
         
         customSerializer.addSerializer(Immagine.class, new ImmagineSerializer());
-        //customSerializer.addDeserializer(Immagine.class, new ImmagineDeserializer());
-       
+        customSerializer.addDeserializer(Immagine.class, new ImmagineDeserializer());
 
         mapper.registerModule(customSerializer);
 

@@ -5,6 +5,9 @@
  */
 package rest;
 
+import authResources.LoggedFilter;
+import authResources.AuthRes;
+import authResources.Logged;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import jackson.ObjectMapperContextResolver;
 import java.util.Collections;
@@ -14,6 +17,8 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import resources.CanaleRes;
 import resources.CanaliRes;
+import resources.ImmagineRes;
+import resources.ImmaginiRes;
 
 /**
  *
@@ -31,10 +36,16 @@ public class RESTApp extends Application{
         HashSet<Class<?>> c = new HashSet<>();
         
         //TODO-> agiungiamo a c le classi delle risorse della nostra applicazione
+        //c.add(AuthRes.class);     
         c.add(CanaliRes.class);
         c.add(CanaleRes.class);
+        c.add(ImmaginiRes.class);
+        c.add(ImmagineRes.class);
+        
+        //DOMANDA: perchè il filtro viene triggerato anche senza annotazione @logged?
+        //c.add(LoggedFilter.class);
       
-            //l'objectMapperContextResolver è necessario per la de/serializzazione dei nostri modelli in json (è una feature di jackson)
+        //l'objectMapperContextResolver è necessario per la de/serializzazione dei nostri modelli in json (è una feature di jackson)
         c.add(ObjectMapperContextResolver.class);
         //JAXRS sa solo quello che gli diamo in merito alle classi, quindi gli passiamo anche il Providere di Jackson
               //che contiene i metodi per la de/serializzazione delle risorse
