@@ -9,11 +9,8 @@ package models;
  *
  * @author leonardo
  */
-public interface Episodio {
+public interface Episodio{
     
-    public int getKey();
-    public void setKey(int key);
-
     public int getNumero();
     public void setNumero(int numero);
 
@@ -22,5 +19,8 @@ public interface Episodio {
 
     public Programma getSerie();
     public void setSerie(Programma serie);
+    
+    public String getTitolo();
+    public void setTitolo(String titolo);
     
 }

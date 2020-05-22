@@ -5,24 +5,30 @@
  */
 package models;
 
+
 /**
  *
  * @author leonardo
  */
 public class Immagine_Imp implements Immagine{
     
-    private int key;
     private String nome;
     private String tipo;
     private long taglia;
-
-    public int getKey() {
-        return key;
+    private Stagione stagione;
+    private Programma programma;
+    
+    public Immagine_Imp(){
+        
+        super();
+        nome = "";
+        tipo = "";
+        taglia = 0;
+        stagione = null;
+        programma = null;
+        
     }
-
-    public void setKey(int key) {
-        this.key = key;
-    }
+   
 
     public String getNome() {
         return nome;
@@ -46,6 +52,26 @@ public class Immagine_Imp implements Immagine{
 
     public void setTaglia(long taglia) {
         this.taglia = taglia;
+    }
+
+    @Override
+    public Stagione getStagione() {
+        return stagione;
+    }
+
+    @Override
+    public void setStagione(Stagione stgn) {
+        this.stagione = stgn;
+    }
+
+    @Override
+    public Programma getProgramma() {
+        return this.programma;
+    }
+
+    @Override
+    public void setProgramma(Programma prgrm) {
+        this.programma = prgrm;
     }
     
 }

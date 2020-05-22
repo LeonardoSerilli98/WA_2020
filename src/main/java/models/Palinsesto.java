@@ -13,9 +13,6 @@ import java.util.Date;
  * @author leonardo
  */
 public interface Palinsesto {
-    
-    public int getKey();
-    public void setKey(int key);
 
     public Programma getProgramma();
     public void setProgramma(Programma programma);

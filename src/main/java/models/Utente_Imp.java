@@ -5,22 +5,24 @@
  */
 package models;
 
+
 /**
  *
  * @author leonardo
  */
 public class Utente_Imp implements Utente{
-    private int key;
+    
     private String email;
     private String password;
     private Ricerca ricerca;
     private Preferenza preferenza;
 
-    public int getKey(){
-        return key;
-    }
-    public void setKey(int key){
-        this.key = key;
+    public Utente_Imp(){    
+        super();
+        email = "";
+        password = "";
+        ricerca = null;
+        preferenza = null;
     }
 
     public String getEmail(){
@@ -28,6 +30,14 @@ public class Utente_Imp implements Utente{
     }
     public void setEmail(String email){
         this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Ricerca getRicerca(){

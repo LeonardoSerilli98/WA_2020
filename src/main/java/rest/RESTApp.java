@@ -17,8 +17,16 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import immondizia.esempioRES;
 import immondizia.EsempioRES;
+import resources.CanaleRes;
+import resources.CanaliRes;
+import resources.EpisodiRes;
+import resources.EpisodiRes;
 import resources.ImmagineRes;
 import resources.ImmaginiRes;
+import resources.PalinsestiRes;
+import resources.PalinsestoRes;
+import resources.ProgrammaRes;
+import resources.ProgrammiRes;
 
 /**
  *
@@ -36,12 +44,23 @@ public class RESTApp extends Application{
         HashSet<Class<?>> c = new HashSet<>();
         
         //TODO-> agiungiamo a c le classi delle risorse della nostra applicazione
-        //c.add(AuthRes.class);     
+        
+        //DOMANDA: perchè il filtro viene triggerato anche senza annotazione @logged?
+        //c.add(AuthRes.class);  
+        //c.add(LoggedFilter.class);
+        
+        
+        c.add(CanaliRes.class);
+        c.add(CanaleRes.class);
+        c.add(EpisodiRes.class);
+        c.add(PalinsestiRes.class);
+        c.add(PalinsestoRes.class);
+        c.add(ProgrammiRes.class);
+        c.add(ProgrammaRes.class);
         c.add(ImmaginiRes.class);
         c.add(ImmagineRes.class);
         
-        //DOMANDA: perchè il filtro viene triggerato anche senza annotazione @logged?
-        //c.add(LoggedFilter.class);
+        
       
         //l'objectMapperContextResolver è necessario per la de/serializzazione dei nostri modelli in json (è una feature di jackson)
         c.add(ObjectMapperContextResolver.class);

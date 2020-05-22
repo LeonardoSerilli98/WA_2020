@@ -5,28 +5,20 @@
  */
 package models;
 
+
 /**
  *
  * @author leonardo
  */
 public class Canale_Imp implements Canale {
     
-    private int key;
     private String nome;
     private Immagine immagine;
         
     public Canale_Imp(){
-        key = 0;
+        super();
         nome = "";
         immagine = null;
-    }
-
-    public int getKey() {
-        return key;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
     }
 
     public String getNome() {

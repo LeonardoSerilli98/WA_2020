@@ -21,36 +21,7 @@ public class LoggedFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
         
-        String token = null;
         
-        //prendiamo il token 
-        String authorizationHeader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-        
-        if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
-            token = authorizationHeader.substring("Bearer".length()).trim();
-        } 
-        
-        if (token != null && !token.isEmpty()) {
-            try {
-                
-                //validiamo il token
-                String user = validateToken(token);
-                
-                if (user != null) {
-                    //inseriamo nel contesto i risultati dell'autenticazione
-                    //per farli usare dai nostri metodi restful
-                    requestContext.setProperty("token", token);
-                    requestContext.setProperty("user", user);
-                    
-                } else {
-                    requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
-                }
-            } catch (Exception e) {
-                requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
-            }
-        } else {
-            requestContext.abortWith(Response.status(Response.Status.UNAUTHORIZED).build());
-        }
     }
 
     private String validateToken(String token) {

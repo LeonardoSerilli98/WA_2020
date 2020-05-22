@@ -12,9 +12,6 @@ import java.util.List;
  * @author leonardo
  */
 public interface Preferenza {
-    
-    int getKey();
-    void setKey(int key);
 
     List<Canale> getCanali();
     void setCanali(List<Canale> canali);

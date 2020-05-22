@@ -5,18 +5,19 @@
  */
 package models;
 
+
 /**
  *
  * @author leonardo
  */
-public interface Utente {
+public interface Utente{
     
-    public int getKey();
-    public void setKey(int key);
-
     public String getEmail();
     public void setEmail(String email);
 
+    public String getPassword();
+    public void setPassword(String password);
+    
     public Ricerca getRicerca();
     public void setRicerca(Ricerca ricerca);
 

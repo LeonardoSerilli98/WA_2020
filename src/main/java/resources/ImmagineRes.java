@@ -15,7 +15,7 @@ import models.Immagine_Imp;
 public class ImmagineRes {
     
      public ImmagineRes(){
-        Immagine i = new Immagine_Imp();       
+        Immagine item = new Immagine_Imp();       
     }
     
 }

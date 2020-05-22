@@ -5,14 +5,12 @@
  */
 package models;
 
+
 /**
  *
  * @author leonardo
  */
-public interface Immagine {
-    
-    public int getKey();
-    public void setKey(int key);
+public interface Immagine{
 
     public String getNome();
     public void setNome(String nome);
@@ -22,5 +20,13 @@ public interface Immagine {
 
     public long getTaglia();
     public void setTaglia(long taglia);
+    
+    public Stagione getStagione();
+    public void setStagione(Stagione stagione);
+    
+    public Programma getProgramma();
+    public void setProgramma(Programma programma);
+    
+    
     
 }

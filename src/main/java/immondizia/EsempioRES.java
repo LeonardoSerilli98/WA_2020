@@ -27,7 +27,7 @@ import models.Immagine_Imp;
  */
 
 //cosi ho mappato il path /rest/canale per la 'Root Resource': canale
-@Path("canali")
+
 public class EsempioRES {
     
     //la notazione '@produces' verra triggerata quando verra fatta una GET che richiede un json

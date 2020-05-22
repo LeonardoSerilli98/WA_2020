@@ -5,10 +5,17 @@
  */
 package resources;
 
+import javax.ws.rs.Path;
+import models.Palinsesto;
+import models.Palinsesto_Imp;
+
 /**
  *
  * @author leonardo
  */
+@Path("palinsesti")
 public class PalinsestiRes {
+        
+
     
 }

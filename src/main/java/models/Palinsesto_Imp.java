@@ -14,7 +14,6 @@ import java.util.Date;
  */
 public class Palinsesto_Imp implements Palinsesto {
     
-    private int key;
     private Programma programma;
     private Canale canale;
     private Time inizio;
@@ -24,7 +23,7 @@ public class Palinsesto_Imp implements Palinsesto {
     private Episodio episodio;
 
     public Palinsesto_Imp() {
-        key = 0;
+        super();
         programma = null;
         canale = null;
         inizio = null;
@@ -34,13 +33,6 @@ public class Palinsesto_Imp implements Palinsesto {
         episodio = null;
     }
 
-    public int getKey() {
-        return key;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
-    }
 
     public Programma getProgramma() {
         return programma;

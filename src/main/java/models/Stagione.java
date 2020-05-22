@@ -14,14 +14,14 @@ import java.util.List;
  */
 public interface Stagione {
 
-    public int getKey();
-    public void setKey(int key);
-
     public int getNumero();
     public void setNumero(int numero);
 
     public Immagine getImmagine();
     public void setImmagine(Immagine immagine);
+    
+    public Programma getProgramma();
+    public void setProgramma(Programma programma);
 
     public List<Episodio> getEpisodi();
     public void setEpisodi(List<Episodio> episodi);

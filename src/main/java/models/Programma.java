@@ -12,9 +12,6 @@ import java.util.List;
  * @author leonardo
  */
 public interface Programma {
-    
-    int getKey();
-    void setKey(int key);
 
     String getNome();
     void setNome(String nome);

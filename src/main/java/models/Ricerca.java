@@ -5,15 +5,13 @@
  */
 package models;
 
+
 /**
  *
  * @author leonardo
  */
 public interface Ricerca {
 
-    public int getKey();
-    public void setKey(int key);
-    
     public Canale getCanale();
     public void setCanale(Canale canale);
 

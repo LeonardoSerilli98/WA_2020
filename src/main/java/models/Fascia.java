@@ -11,11 +11,8 @@ import java.sql.Time;
  *
  * @author leonardo
  */
-public interface Fascia {
+public interface Fascia{
     
-    public int getKey();
-    public void setKey(int key);
-            
     public Time getInizio();
     public void setInizio(Time inizio);
             

@@ -4,32 +4,24 @@
  * and open the template in the editor.
  */
 package models;
-
 /**
  *
  * @author leonardo
  */
 public class Episodio_Imp implements Episodio {
     
-    private int key;
     private int numero;
+    private String titolo;
     private Stagione stagione;
     private Programma serie;
     
     public Episodio_Imp (){
-        key = 0;
+        super();
         numero = 0;
+        titolo = "";
         stagione = null;
         serie = null;
     }   
-
-    public int getKey() {
-        return key;
-    }
-
-    public void setKey(int key) {
-        this.key = key;
-    }
 
     public int getNumero() {
         return numero;
@@ -53,6 +45,16 @@ public class Episodio_Imp implements Episodio {
 
     public void setSerie(Programma serie) {
         this.serie = serie;
+    }
+
+    @Override
+    public String getTitolo() {
+        return this.titolo;
+    }
+
+    @Override
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
     }
     
 }

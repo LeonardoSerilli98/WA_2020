@@ -5,22 +5,24 @@
  */
 package models;
 
+
 /**
  *
  * @author leonardo
  */
-public class Ricerca_Imp implements Ricerca{
-    private int key;
+public class Ricerca_Imp  implements Ricerca{
+
     private Canale canale;
     private Programma programma;
     private Genere genere;
     private Fascia fascia;
 
-    public int getKey(){
-        return this.key;
-    }
-    public void setKey(int key){
-        this.key = key;
+    public Ricerca_Imp(){
+        super();
+        canale = null;
+        programma = null;
+        genere = null;
+        fascia = null;
     }
 
     public Canale getCanale(){

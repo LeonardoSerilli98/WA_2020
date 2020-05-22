@@ -13,18 +13,19 @@ import java.util.List;
  */
 public class Stagione_Imp implements Stagione {
     
-    private int key;
     private int numero;
     private Immagine immagine;
+    private Programma programma;
     private List<Episodio> episodi;
 
-    public int getKey(){
-        return this.key;
+    public Stagione_Imp(){
+        super();
+        numero = 0;
+        immagine = null;
+        programma = null;
+        episodi = null;
     }
-    public void setKey(int key){
-        this.key = key;
-    }
-
+    
     public int getNumero(){
         return this.numero;
     }
@@ -44,6 +45,14 @@ public class Stagione_Imp implements Stagione {
     }
     public void setEpisodi(List<Episodio> episodi){
         this.episodi = episodi;
+    }
+
+    public Programma getProgramma() {
+        return programma;
+    }
+
+    public void setProgramma(Programma programma) {
+        this.programma = programma;
     }
 
    

@@ -12,9 +12,6 @@ package models;
  */
 public interface Canale {
     
-    int getKey(); 
-    void setKey(int key);
-
     String getNome();
     void setNome(String nome);
     
