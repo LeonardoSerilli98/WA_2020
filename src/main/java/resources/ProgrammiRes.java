@@ -9,6 +9,6 @@ package resources;
  *
  * @author leonardo
  */
-public class CanaleRes {
+public class ProgrammiRes {
     
 }

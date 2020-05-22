@@ -15,8 +15,8 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
-import resources.CanaleRes;
-import resources.CanaliRes;
+import immondizia.esempioRES;
+import immondizia.EsempioRES;
 import resources.ImmagineRes;
 import resources.ImmaginiRes;
 
@@ -37,8 +37,6 @@ public class RESTApp extends Application{
         
         //TODO-> agiungiamo a c le classi delle risorse della nostra applicazione
         //c.add(AuthRes.class);     
-        c.add(CanaliRes.class);
-        c.add(CanaleRes.class);
         c.add(ImmaginiRes.class);
         c.add(ImmagineRes.class);
         
