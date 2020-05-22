@@ -23,11 +23,6 @@ import models.Canale;
 @Path("canali")
 public class CanaliRes {
     
-    @Path("{id: [1-9]+}")
-    public CanaleRes singleRes(){
-        return new CanaleRes();
-    }
-    
     @GET
     @Produces("application/json")
     public Response getAll(){
@@ -42,6 +37,11 @@ public class CanaliRes {
         
         return Response.ok("store un canale").build();
       
+    }
+    
+    @Path("{id: [1-9]+}")
+    public CanaleRes singleRes(){
+        return new CanaleRes();
     }
     
     

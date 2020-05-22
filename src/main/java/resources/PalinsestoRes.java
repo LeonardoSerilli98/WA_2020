@@ -5,6 +5,12 @@
  */
 package resources;
 
+import javax.ws.rs.GET;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
+import models.Canale;
 import models.Palinsesto;
 import models.Palinsesto_Imp;
 
@@ -16,6 +22,14 @@ public class PalinsestoRes {
     
     public PalinsestoRes(){
         Palinsesto item = new Palinsesto_Imp();       
+    }
+    
+    @GET
+    @Produces("application/json")
+    public Response getPalinsestoByCanale(){
+        
+        return Response.ok("singolo palinsesto by canale").build();
+      
     }
     
 }

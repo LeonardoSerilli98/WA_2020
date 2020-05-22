@@ -26,7 +26,18 @@ public class CanaleRes {
     
      public CanaleRes(){
         Canale item = new Canale_Imp();       
-    }   
+    }  
+
+    @GET
+    @Produces("application/json")
+    public Response getSingeCanale(){
+        return Response.ok("url singolo canale").build();
+    }
+         
+    @Path("palinsesto")
+    public PalinsestoRes getPalinsesto(){
+        return new PalinsestoRes();
+    }
      
      //@Logged
     @PUT
