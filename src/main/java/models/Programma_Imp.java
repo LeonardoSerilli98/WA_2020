@@ -5,13 +5,14 @@
  */
 package models;
 
+import data.DataItemImpl;
 import java.util.List;
 
 /**
  *
  * @author leonardo
  */
-public class Programma_Imp implements Programma{
+public class Programma_Imp extends DataItemImpl<Integer> implements Programma{
     
     private String nome;
     private String descrizione;

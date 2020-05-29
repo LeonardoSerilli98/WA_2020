@@ -29,6 +29,10 @@ public class CanaleDeserializer extends JsonDeserializer<Canale> {
         
         JsonNode node = jp.getCodec().readTree(jp);
 
+        if (node.has("id")) {
+            item.setKey(node.get("id").asInt());
+        }
+
         if (node.has("nome")) {
             item.setNome(node.get("nome").asText());
         }

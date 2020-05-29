@@ -5,11 +5,13 @@
  */
 package models;
 
+import data.DataItem;
+
 /**
  *
  * @author leonardo
  */
-public interface Episodio{
+public interface Episodio extends DataItem<Integer>{
     
     public int getNumero();
     public void setNumero(int numero);

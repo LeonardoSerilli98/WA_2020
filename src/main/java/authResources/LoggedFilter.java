@@ -21,6 +21,8 @@ public class LoggedFilter implements ContainerRequestFilter {
     @Override
     public void filter(ContainerRequestContext requestContext) throws IOException {
         
+        System.out.println("filtered");
+        
         
     }
 

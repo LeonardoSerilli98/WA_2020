@@ -5,12 +5,13 @@
  */
 package models;
 
+import data.DataItemImpl;
 
 /**
  *
  * @author leonardo
  */
-public class Ricerca_Imp  implements Ricerca{
+public class Ricerca_Imp extends DataItemImpl<Integer>implements Ricerca{
 
     private Canale canale;
     private Programma programma;

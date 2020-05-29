@@ -28,12 +28,13 @@ public class ImmagineSerializer extends StdSerializer<Immagine>{
 
 
     @Override
-    public void serialize(Immagine t, JsonGenerator jg, SerializerProvider sp) throws IOException, JsonProcessingException {
+    public void serialize(Immagine item, JsonGenerator jg, SerializerProvider sp) throws IOException, JsonProcessingException {
         
-        jg.writeStartObject();
-        jg.writeObjectField("nome", t.getNome());
-        jg.writeObjectField("tipo", t.getTipo());
-        jg.writeNumberField("taglia", t.getTaglia());
+        jg.writeStartObject();   
+        jg.writeObjectField("id", item.getKey());  
+        jg.writeObjectField("nome", item.getNome());
+        jg.writeObjectField("tipo", item.getTipo());
+        jg.writeNumberField("taglia", item.getTaglia());
         jg.writeEndObject();
     }
     

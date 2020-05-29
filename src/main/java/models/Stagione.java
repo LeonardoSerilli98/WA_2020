@@ -5,6 +5,7 @@
  */
 package models;
 
+import data.DataItem;
 import java.util.List;
 
 
@@ -12,7 +13,7 @@ import java.util.List;
  *
  * @author leonardo
  */
-public interface Stagione {
+public interface Stagione extends DataItem<Integer>{
 
     public int getNumero();
     public void setNumero(int numero);

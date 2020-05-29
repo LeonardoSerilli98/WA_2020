@@ -5,13 +5,14 @@
  */
 package models;
 
+import data.DataItem;
 import java.util.List;
 
 /**
  *
  * @author leonardo
  */
-public interface Preferenza {
+public interface Preferenza extends DataItem<Integer>{
 
     List<Canale> getCanali();
     void setCanali(List<Canale> canali);

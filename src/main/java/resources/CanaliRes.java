@@ -23,20 +23,18 @@ import models.Canale;
 @Path("canali")
 public class CanaliRes {
     
+    
     @GET
     @Produces("application/json")
     public Response getAll(){
- 
         return Response.ok("ritorna le URL di tutti i singoli canali").build();
     }
     
-    //@Logged
+    @Logged
     @POST
     @Consumes("application/json")
     public Response Store(@Context UriInfo uriinfo, Canale item ){
-        
-        return Response.ok("store un canale").build();
-      
+        return Response.ok("store un canale").build(); 
     }
     
     @Path("{id: [1-9]+}")

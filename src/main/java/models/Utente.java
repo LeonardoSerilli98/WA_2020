@@ -5,12 +5,13 @@
  */
 package models;
 
+import data.DataItem;
 
 /**
  *
  * @author leonardo
  */
-public interface Utente{
+public interface Utente extends DataItem<Integer>{
     
     public String getEmail();
     public void setEmail(String email);

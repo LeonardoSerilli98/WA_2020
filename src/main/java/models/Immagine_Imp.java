@@ -5,12 +5,13 @@
  */
 package models;
 
+import data.DataItemImpl;
 
 /**
  *
  * @author leonardo
  */
-public class Immagine_Imp implements Immagine{
+public class Immagine_Imp extends DataItemImpl<Integer>implements Immagine{
     
     private String nome;
     private String tipo;

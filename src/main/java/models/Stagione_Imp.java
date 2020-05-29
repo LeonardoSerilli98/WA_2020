@@ -5,13 +5,14 @@
  */
 package models;
 
+import data.DataItemImpl;
 import java.util.List;
 
 /**
  *
  * @author leonardo
  */
-public class Stagione_Imp implements Stagione {
+public class Stagione_Imp extends DataItemImpl<Integer> implements Stagione {
     
     private int numero;
     private Immagine immagine;

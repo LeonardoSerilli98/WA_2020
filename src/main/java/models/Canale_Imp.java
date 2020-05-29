@@ -5,12 +5,13 @@
  */
 package models;
 
+import data.DataItemImpl;
 
 /**
  *
  * @author leonardo
  */
-public class Canale_Imp implements Canale {
+public class Canale_Imp extends DataItemImpl<Integer> implements Canale {
     
     private String nome;
     private Immagine immagine;

@@ -57,7 +57,8 @@ public class AuthRes {
             if (token != null) {
                 revokeToken(token);
             }
-            return Response.noContent().build();
+            return Response.ok("slogged").build();
+            //return Response.noContent().build();
         } catch (Exception e) {
             return Response.serverError().build();
         }

@@ -28,10 +28,11 @@ public class CanaleSerializer extends StdSerializer<Canale>{
     }
 
     @Override
-    public void serialize(Canale t, JsonGenerator jg, SerializerProvider sp) throws IOException, JsonProcessingException {
-                jg.writeStartObject();              
-                jg.writeObjectField("nome", t.getNome());             
-                jg.writeObjectField("immagine", t.getImmagine());
+    public void serialize(Canale item, JsonGenerator jg, SerializerProvider sp) throws IOException, JsonProcessingException {
+                jg.writeStartObject();   
+                jg.writeObjectField("id", item.getKey());           
+                jg.writeObjectField("nome", item.getNome());             
+                jg.writeObjectField("immagine", item.getImmagine());
                 jg.writeEndObject();
     }
     

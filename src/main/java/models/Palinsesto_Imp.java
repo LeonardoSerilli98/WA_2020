@@ -5,6 +5,7 @@
  */
 package models;
 
+import data.DataItemImpl;
 import java.sql.Time;
 import java.util.Date;
 
@@ -12,7 +13,7 @@ import java.util.Date;
  *
  * @author leonardo
  */
-public class Palinsesto_Imp implements Palinsesto {
+public class Palinsesto_Imp extends DataItemImpl<Integer>implements Palinsesto {
     
     private Programma programma;
     private Canale canale;

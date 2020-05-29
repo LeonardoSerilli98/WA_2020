@@ -5,12 +5,13 @@
  */
 package models;
 
+import data.DataItemImpl;
 
 /**
  *
  * @author leonardo
  */
-public class Utente_Imp implements Utente{
+public class Utente_Imp extends DataItemImpl<Integer>implements Utente{
     
     private String email;
     private String password;

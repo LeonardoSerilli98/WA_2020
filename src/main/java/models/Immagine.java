@@ -5,12 +5,13 @@
  */
 package models;
 
+import data.DataItem;
 
 /**
  *
  * @author leonardo
  */
-public interface Immagine{
+public interface Immagine extends DataItem<Integer>{
 
     public String getNome();
     public void setNome(String nome);

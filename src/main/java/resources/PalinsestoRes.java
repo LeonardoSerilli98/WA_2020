@@ -7,10 +7,8 @@ package resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
-import models.Canale;
 import models.Palinsesto;
 import models.Palinsesto_Imp;
 
@@ -26,8 +24,14 @@ public class PalinsestoRes {
     
     @GET
     @Produces("application/json")
-    public Response getPalinsestoByCanale(){
+    public Response getPalinsestoByCanale(
+        @QueryParam("data") String data){
         
+        if(data!=null && data!=""){
+            
+             return Response.ok("singolo palinsesto by canale and data").build();
+            
+        }
         return Response.ok("singolo palinsesto by canale").build();
       
     }

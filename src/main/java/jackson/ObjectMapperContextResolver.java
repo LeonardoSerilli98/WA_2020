@@ -10,7 +10,11 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import javax.ws.rs.ext.ContextResolver;
 import models.Canale;
+import models.Episodio;
+import models.Genere;
 import models.Immagine;
+import models.Palinsesto;
+import models.Programma;
 
 /**
  *
@@ -44,11 +48,17 @@ public class ObjectMapperContextResolver implements ContextResolver<ObjectMapper
         customSerializer.addSerializer(Immagine.class, new ImmagineSerializer());
         customSerializer.addDeserializer(Immagine.class, new ImmagineDeserializer());
 		
-		customSerializer.addSerializer(Palinsesto.class, new PalinsestoSerializer());
+	customSerializer.addSerializer(Palinsesto.class, new PalinsestoSerializer());
         customSerializer.addDeserializer(Palinsesto.class, new PalinsestoDeserializer());
 		
-		customSerializer.addSerializer(Episodio.class, new EpisodioSerializer());
+	customSerializer.addSerializer(Episodio.class, new EpisodioSerializer());
         customSerializer.addDeserializer(Episodio.class, new EpisodioDeserializer());
+		
+	customSerializer.addSerializer(Programma.class, new ProgrammaSerializer());
+        customSerializer.addDeserializer(Programma.class, new ProgrammaDeserializer());
+		
+	customSerializer.addSerializer(Genere.class, new GenereSerializer());
+        customSerializer.addDeserializer(Genere.class, new GenereDeserializer());
 
         mapper.registerModule(customSerializer);
 

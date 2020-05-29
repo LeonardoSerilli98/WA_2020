@@ -5,6 +5,7 @@
  */
 package resources;
 
+import authResources.Logged;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -25,7 +26,7 @@ public class ProgrammiRes {
         return new ProgrammaRes();
     }
     
-    //@Logged
+    @Logged
     @POST
     @Consumes("application/json")
     public Response Store(@Context UriInfo uriinfo, Programma item){

@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,6 +6,7 @@
  */
 package resources;
 
+import authResources.Logged;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -33,13 +35,9 @@ public class CanaleRes {
     public Response getSingeCanale(){
         return Response.ok("url singolo canale").build();
     }
-         
-    @Path("palinsesto")
-    public PalinsestoRes getPalinsesto(){
-        return new PalinsestoRes();
-    }
+
      
-     //@Logged
+    @Logged
     @PUT
     @Consumes("application/json")
     public Response Update(@Context UriInfo uriinfo, Canale item ){
@@ -48,6 +46,10 @@ public class CanaleRes {
       
     }
     
-    
+         
+    @Path("palinsesto")
+    public PalinsestoRes getPalinsesto(){
+        return new PalinsestoRes();
+    }    
     
 }

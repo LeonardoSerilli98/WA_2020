@@ -5,13 +5,14 @@
  */
 package models;
 
+import data.DataItemImpl;
 import java.util.List;
 
 /**
  *
  * @author leonardo
  */
-public class Preferenza_Imp implements Preferenza{
+public class Preferenza_Imp extends DataItemImpl<Integer> implements Preferenza{
     
     private List<Canale> canali;
     private Fascia fascia;

@@ -5,12 +5,13 @@
  */
 package models;
 
+import data.DataItemImpl;
 
 /**
  *
  * @author leonardo
  */
-public class Genere_Imp implements Genere {
+public class Genere_Imp extends DataItemImpl<Integer> implements Genere {
 
     private String nome;
 

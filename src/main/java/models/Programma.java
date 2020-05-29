@@ -5,13 +5,14 @@
  */
 package models;
 
+import data.DataItem;
 import java.util.List;
 
 /**
  *
  * @author leonardo
  */
-public interface Programma {
+public interface Programma extends DataItem<Integer> {
 
     String getNome();
     void setNome(String nome);

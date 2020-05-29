@@ -5,13 +5,14 @@
  */
 package models;
 
+import data.DataItemImpl;
 import java.sql.Time;
 
 /**
  *
  * @author leonardo
  */
-public class Fascia_Imp implements Fascia{
+public class Fascia_Imp extends DataItemImpl<Integer> implements Fascia{
     
     private Time inizio;
     private Time fine;
